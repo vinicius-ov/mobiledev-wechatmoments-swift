@@ -16,4 +16,7 @@ struct Img: Decodable {
 
 struct Tweet: Decodable {
     let content: String?
+    let sender: User?
+    let images: [Img]?
+    let comments: [Comment]?
 }

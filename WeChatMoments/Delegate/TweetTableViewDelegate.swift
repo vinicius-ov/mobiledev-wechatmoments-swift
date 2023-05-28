@@ -16,9 +16,14 @@ class TweetTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // TODO: Calculate the height for each comment cell here, using the method below
-        // height(for comment: Comment, on tableView: UITableView) -> CGFloat
-        return 0
+        // TODO: Calculate the height for each comment cell here, using the method below  gg
+        guard let tweet = tweets?[indexPath.row] else { return 0 }
+        var commentsHeight: CGFloat = 0
+        guard let comments = tweet.comments else { return 0 }
+        for comment in comments {
+            commentsHeight = commentsHeight + height(for: comment, on: tableView)
+        }
+        return commentsHeight
     }
     
     private func height(for comment: Comment, on tableView: UITableView) -> CGFloat {
@@ -63,8 +68,8 @@ class TweetTableViewDelegate: NSObject, UITableViewDelegate {
             height += self.getHeightOf(content: content, in: tableView)
         }
 
-        // TODO: set the real images array here and show the images on cell
-        let images = [Img]()
+        // TODO: set the real images array here and show the images on cell   gg
+        let images: [Img] = tweet.images ?? []
         let imgUrls = images.map { $0.url }
         height += self.getHeightOf(imageUrls: imgUrls, in: tableView)
 
