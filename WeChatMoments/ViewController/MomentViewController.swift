@@ -79,7 +79,8 @@ class MomentViewController: UITableViewController {
 
     func loadTweetsData() -> Promise<Void> {
         return self.tweetService.getTweets(Constants.USER_NAME).map { tweets in
-            self.tweets = tweets
+            let tts = tweets.filter { !(($0.content ?? "").isEmpty && ($0.images ?? []).isEmpty) }
+            self.tweets = tts
         }
     }
 }
