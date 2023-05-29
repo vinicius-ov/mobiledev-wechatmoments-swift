@@ -12,9 +12,12 @@ class TweetView: UITableViewHeaderFooterView {
         didSet {
             self.setContent(tweet.content)
             // TODO: Assign the name, avatar and imageURLs
-//            self.btnSender.setTitle(nick ?? username, for: .normal)
-//            self.setSenderAvatar(avatar)
-//            self.addImageViews(imageURLs)
+            //            self.btnSender.setTitle(nick ?? username, for: .normal)
+            //            self.setSenderAvatar(avatar)
+            //            self.addImageViews(imageURLs)
+            self.btnSender.setTitle("nick ?? username", for: .normal)
+            self.setSenderAvatar("avatar")
+            self.addImageViews([])
         }
     }
 

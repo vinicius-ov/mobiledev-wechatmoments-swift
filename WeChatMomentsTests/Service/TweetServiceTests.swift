@@ -10,6 +10,7 @@ class TweetServiceTests: XCTestCase {
     private var tweetService: TweetService!
 
     override func setUp() {
+        HttpServiceMock.fakeTweets()
         self.tweetService = TweetService()
     }
 
@@ -21,7 +22,7 @@ class TweetServiceTests: XCTestCase {
 
         self.tweetService.getTweets(TestDataConfig.USER).done {
             tweets in
-            if tweets?.count == 0 {
+            if tweets.count == 0 {
                 XCTAssertTrue(false, "The tweets should be not nil")
             }
             readyExpectation.fulfill()
@@ -37,12 +38,14 @@ class TweetServiceTests: XCTestCase {
     func testWrongURL() {
         let readyExpectation = expectation(description: "ready")
         tweetService.getTweets("jsmitn2").done { tweets in
-            let numberOfTweets = tweets?.count ?? 0
+            let numberOfTweets = tweets.count
             if numberOfTweets > 0 {
                 XCTAssertTrue(false, "There should be not tweet")
             }
             readyExpectation.fulfill()
         }.catch { _ in
+//            XCTAssertTrue(true, "request failed, error happen")
+//            self.expectation(description: "ready").fulfill()
             XCTAssertThrowsError("request failed,error happen")
         }
 

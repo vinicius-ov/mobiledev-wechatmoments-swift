@@ -7,7 +7,7 @@
 import UIKit
 
 struct Constants {
-    static let USER_NAME = "jsmith"
+    static let USER_NAME = "jssmith"
     
     static let FONT_SIZE_COMMENT: CGFloat = 12
     static let FONT_SIZE_CONTENT: CGFloat = 15

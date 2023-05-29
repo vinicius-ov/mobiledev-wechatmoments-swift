@@ -16,7 +16,7 @@ protocol BaseService {
 class HttpService: BaseService {
     internal func get(url: String) -> Promise<Data> {
         return Promise { resolve in
-            AF.request(url).responseData(completionHandler: { response in
+            AF.request(url).validate().responseData(completionHandler: { response in
                 switch response.result {
                 case .success(let data):
                     resolve.resolve(data, nil)

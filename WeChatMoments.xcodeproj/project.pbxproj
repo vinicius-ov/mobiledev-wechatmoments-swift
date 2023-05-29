@@ -35,6 +35,7 @@
 		6BFBA30925E257BA00C17D16 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFBA30825E257BA00C17D16 /* UIColor.swift */; };
 		6BFBA30E25E25A1900C17D16 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFBA30D25E25A1900C17D16 /* UIImage.swift */; };
 		6BFBA31425E25ABE00C17D16 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFBA31325E25ABE00C17D16 /* ImageHelper.swift */; };
+		F298AE0A2A243CFE00E4DCEA /* WeChatMomentsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298AE092A243CFE00E4DCEA /* WeChatMomentsErrors.swift */; };
 		FB3AD7508DE29F3B55D6A974 /* Pods_WeChatMoments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92A272A17103E9693D82252 /* Pods_WeChatMoments.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		7459CFB1C82CDDF106AEB8A4 /* Pods-WeChatMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeChatMomentsTests.debug.xcconfig"; path = "Target Support Files/Pods-WeChatMomentsTests/Pods-WeChatMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9E77C01A45BC9422F532A4C /* Pods-WeChatMomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeChatMomentsTests.release.xcconfig"; path = "Target Support Files/Pods-WeChatMomentsTests/Pods-WeChatMomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B92A272A17103E9693D82252 /* Pods_WeChatMoments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeChatMoments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F298AE092A243CFE00E4DCEA /* WeChatMomentsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatMomentsErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				110586AA26D6BAFE008BB4B3 /* MyModels.swift */,
+				F298AE092A243CFE00E4DCEA /* WeChatMomentsErrors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				6BB6D9BF25E29A6600E27477 /* FootView.swift in Sources */,
 				6BB6D9B025E290F300E27477 /* TweetView.swift in Sources */,
 				6BB6D9B525E298B700E27477 /* TweetTableViewDelegate.swift in Sources */,
+				F298AE0A2A243CFE00E4DCEA /* WeChatMomentsErrors.swift in Sources */,
 				6BFBA31425E25ABE00C17D16 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@ class TweetTableViewDelegate: NSObject, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // TODO: Calculate the height for each comment cell here, using the method below  gg
-        guard let tweet = tweets?[indexPath.row] else { return 0 }
+        guard let tweet = tweets?[indexPath.section] else { return 0 }
         var commentsHeight: CGFloat = 0
         guard let comments = tweet.comments else { return 0 }
         for comment in comments {

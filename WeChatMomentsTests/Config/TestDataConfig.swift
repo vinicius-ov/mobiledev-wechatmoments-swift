@@ -14,8 +14,8 @@ struct TestDataConfig {
     static let URL_TWEETS = "\(TestDataConfig.URL_HOST)/user/\(TestDataConfig.USER)/tweets"
 
     static let JSON_HOST = ["status": "ok"]
-    static let BAD_REQUEST = ["staust": "bad request"]
-    static let NOT_FOUND = ["staust": "not found"]
+    static let BAD_REQUEST = ["status": "bad request"]
+    static let NOT_FOUND = ["status": "not found"]
 
     static let JSON_USER = ["profile-image": "http://img2.findthebest.com/sites/default/files/688/media/images/Mingle_159902_i0.png", "avatar": "http://info.thoughtworks.com/rs/thoughtworks2/images/glyph_badge.png", "nick": "John Smith", "username": TestDataConfig.USER]
 

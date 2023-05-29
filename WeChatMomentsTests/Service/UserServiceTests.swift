@@ -10,6 +10,7 @@ class UserServiceTests: XCTestCase {
     private var userService: UserService!
 
     override func setUp() {
+        HttpServiceMock.fakeUserProfile()
         self.userService = UserService()
     }
 
@@ -22,7 +23,7 @@ class UserServiceTests: XCTestCase {
         self.userService.getUserProfile(TestDataConfig.USER).done {
             user in
             if let user = user,
-               let username = user["username"] as? String {
+               let username = user.username {
                 XCTAssertEqual(TestDataConfig.USER, username, "User should be jsmith.(\(username))")
             } else {
                 XCTAssertTrue(false, "User should be jsmith.")
